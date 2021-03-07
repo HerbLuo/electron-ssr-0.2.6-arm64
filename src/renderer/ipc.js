@@ -30,7 +30,8 @@ ipcRenderer.on(events.EVENT_APP_NOTIFY_MAIN, (e, { title, body }) => {
   store.commit('updateView', { ...targetView, fromMain: true })
 }).on(events.EVENT_APP_ERROR_MAIN, (e, err) => {
   // 弹框显示main进程报错内容
-  alert(err)
+  console.log(err)
+  // alert(err)
 }).on(events.EVENT_SUBSCRIBE_UPDATE_MAIN, (e) => {
   // 更新订阅服务器
   store.dispatch('updateSubscribes').then(updatedCount => {

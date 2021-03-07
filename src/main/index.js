@@ -16,6 +16,7 @@ import logger from './logger'
 import { clearShortcuts } from './shortcut'
 import { loadConfigsFromString } from '../shared/ssr'
 import { isMac, isWin } from '../shared/env'
+import { showMainError } from './ipc'
 
 const theLock = app.requestSingleInstanceLock()
 if (!theLock) {
@@ -128,3 +129,5 @@ app.on('activate', () => {
     createWindow()
   }
 })
+
+process.on('uncaughtException', showMainError)

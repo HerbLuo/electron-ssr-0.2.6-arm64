@@ -82,7 +82,7 @@ function release () {
         ]
       },
       mac: {
-        icon: 'build/icons/icon.icns',
+        icon: 'static/icon.icns',
         category: 'public.app-category.developer-tools',
         target: {
           target: 'dir',

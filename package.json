@@ -26,7 +26,6 @@
     "mocha": "cross-env NODE_ENV=test ./node_modules/.bin/mocha --reporter=nyan --require babel-register test/unit/specs/qrcode.spec.js"
   },
   "dependencies": {
-    "@sentry/electron": "0.14.0",
     "auto-launch": "^5.0.5",
     "download-git-repo": "^1.0.1",
     "electron-log": "^2.2.17",
